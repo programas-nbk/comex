@@ -34,4 +34,12 @@ public class Pedido {
   public int getQuantidadeVendida() {
     return this.quantidadeVendida;
   }
+
+  public double valorTotal() {
+    return this.produto.getPrecoUnitario() * this.getQuantidadeVendida();
+  }
+
+  public double totalDeImpostos() {
+    return this.produto.calculaImposto() * this.getQuantidadeVendida();
+  }
 }
