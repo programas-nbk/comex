@@ -3,14 +3,14 @@ import java.time.LocalDate;
 public class Pedido {
   private int id;
   private LocalDate data;
-  private String CPF;
+  private Cliente cliente;
   private Produto produto;
   private int quantidadeVendida;
 
-  public Pedido(int id, LocalDate data, String CPF, Produto produto, int quantidadeVendida) {
+  public Pedido(int id, LocalDate data, Cliente cliente, Produto produto, int quantidadeVendida) {
     this.id = id;
     this.data = data;
-    this.CPF = CPF;
+    this.cliente = cliente;
     this.produto = produto;
     this.quantidadeVendida = quantidadeVendida;
   }
@@ -23,8 +23,8 @@ public class Pedido {
     return this.data;
   }
 
-  public String getCPF() {
-    return this.CPF;
+  public Cliente getCliente() {
+    return this.cliente;
   }
 
   public Produto getProduto() {
