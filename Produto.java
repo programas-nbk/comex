@@ -1,10 +1,10 @@
 public class Produto {
-  int id;
-  String nome;
-  String descricao;
-  double precoUnitario;
-  int quantidadeEmEstoque;
-  Categoria categoria;
+  private int id;
+  private String nome;
+  private String descricao;
+  private double precoUnitario;
+  private int quantidadeEmEstoque;
+  private Categoria categoria;
 
   public Produto(int id, String nome, double precoUnitario, int quantidadeEmEstoque, Categoria categoria) {
     this.id = id;

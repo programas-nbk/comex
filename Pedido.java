@@ -1,11 +1,11 @@
 import java.time.LocalDate;
 
 public class Pedido {
-  int id;
-  LocalDate data;
-  String CPF;
-  Produto produto;
-  int quantidadeVendida;
+  private int id;
+  private LocalDate data;
+  private String CPF;
+  private Produto produto;
+  private int quantidadeVendida;
 
   public Pedido(int id, LocalDate data, String CPF, Produto produto, int quantidadeVendida) {
     this.id = id;
