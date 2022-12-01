@@ -3,9 +3,13 @@ public class Categoria {
   private String nome;
   private String status = "ATIVA";
 
-  public Categoria(int id, String nome, String status) {
+  public Categoria(int id, String nome) {
     this.id = id;
     this.nome = nome;
+  }
+
+  public Categoria(int id, String nome, String status) {
+    this(id, nome);
     this.status = status;
   }
 
