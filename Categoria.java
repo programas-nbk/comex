@@ -1,15 +1,17 @@
 public class Categoria {
+  private static int idClass = 0;
   private int id;
   private String nome;
   private String status = "ATIVA";
 
-  public Categoria(int id, String nome) {
-    this.id = id;
+  public Categoria(String nome) {
+    Categoria.idClass += 1;
+    setId(Categoria.idClass);
     this.nome = nome;
   }
 
-  public Categoria(int id, String nome, String status) {
-    this(id, nome);
+  public Categoria(String nome, String status) {
+    this(nome);
     this.status = status;
   }
 
@@ -17,7 +19,7 @@ public class Categoria {
     return this.id;
   }
 
-  public void setId(int id) {
+  private void setId(int id) {
     this.id = id;
   }
 

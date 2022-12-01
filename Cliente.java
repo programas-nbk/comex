@@ -1,4 +1,5 @@
 public class Cliente {
+  private static int idClass;
   private int id;
   private String primeiroNome;
   private String sobrenome;
@@ -11,9 +12,10 @@ public class Cliente {
   private String cidade;
   private String estado;
 
-  public Cliente(int id, String primeiroNome, String sobrenome, String CPF, int telefone, String rua, int numeroDaCasa,
+  public Cliente(String primeiroNome, String sobrenome, String CPF, int telefone, String rua, int numeroDaCasa,
       String complemento, String bairro, String cidade, String estado) {
-    this.id = id;
+    Cliente.idClass += 1;
+    setId(Cliente.idClass);
     this.primeiroNome = primeiroNome;
     this.sobrenome = sobrenome;
     this.CPF = CPF;
@@ -28,6 +30,10 @@ public class Cliente {
 
   public int getId() {
     return this.id;
+  }
+
+  private void setId(int id) {
+    this.id = id;
   }
 
   public String getPrimeiroNome() {

@@ -1,14 +1,16 @@
 import java.time.LocalDate;
 
 public class Pedido {
+  private static int idClass;
   private int id;
   private LocalDate data;
   private Cliente cliente;
   private Produto produto;
   private int quantidadeVendida;
 
-  public Pedido(int id, LocalDate data, Cliente cliente, Produto produto, int quantidadeVendida) {
-    this.id = id;
+  public Pedido(LocalDate data, Cliente cliente, Produto produto, int quantidadeVendida) {
+    Pedido.idClass +=1;
+    setId(Pedido.idClass);
     this.data = data;
     this.cliente = cliente;
     this.produto = produto;
@@ -17,6 +19,10 @@ public class Pedido {
 
   public int getId() {
     return this.id;
+  }
+
+  private void setId(int id) {
+    this.id = id;
   }
 
   public LocalDate getData() {

@@ -1,4 +1,5 @@
 public class Produto {
+  private static int idClass;
   private int id;
   private String nome;
   private String descricao;
@@ -6,17 +7,18 @@ public class Produto {
   private int quantidadeEmEstoque;
   private Categoria categoria;
 
-  public Produto(int id, String nome, double precoUnitario, int quantidadeEmEstoque, Categoria categoria) {
-    this.id = id;
+  public Produto(String nome, double precoUnitario, int quantidadeEmEstoque, Categoria categoria) {
+    Produto.idClass += 1;
+    setId(Produto.idClass);
     this.nome = nome;
     this.precoUnitario = precoUnitario;
     this.quantidadeEmEstoque = quantidadeEmEstoque;
     this.categoria = categoria;
   }
 
-  public Produto(int id, String nome, String descricao, double precoUnitario, int quantidadeEmEstoque,
+  public Produto(String nome, String descricao, double precoUnitario, int quantidadeEmEstoque,
       Categoria categoria) {
-    this(id, nome, precoUnitario, quantidadeEmEstoque, categoria);
+    this(nome, precoUnitario, quantidadeEmEstoque, categoria);
     this.descricao = descricao;
   }
 
@@ -24,7 +26,7 @@ public class Produto {
     return this.id;
   }
 
-  public void setId(int id) {
+  private void setId(int id) {
     this.id = id;
   }
 

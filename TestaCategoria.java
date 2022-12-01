@@ -1,8 +1,8 @@
 public class TestaCategoria {
   public static void main(String[] args) {
-    Categoria informatica = new Categoria(1, "INFORMÁTICA");
-    Categoria moveis = new Categoria(2, "MÓVEIS", "INATIVA");
-    Categoria livros = new Categoria(3, "LIVROS");
+    Categoria informatica = new Categoria("INFORMÁTICA");
+    Categoria moveis = new Categoria("MÓVEIS", "INATIVA");
+    Categoria livros = new Categoria("LIVROS");
 
     String dadosDaInformatica = String.format("Categoria %s (%d - %s)", informatica.getNome(), informatica.getId(),
         informatica.getStatus());
