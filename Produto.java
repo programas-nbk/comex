@@ -6,6 +6,20 @@ public class Produto {
   int quantidadeEmEstoque;
   Categoria categoria;
 
+  public Produto(int id, String nome, double precoUnitario, int quantidadeEmEstoque, Categoria categoria) {
+    this.id = id;
+    this.nome = nome;
+    this.precoUnitario = precoUnitario;
+    this.quantidadeEmEstoque = quantidadeEmEstoque;
+    this.categoria = categoria;
+  }
+
+  public Produto(int id, String nome, String descricao, double precoUnitario, int quantidadeEmEstoque,
+      Categoria categoria) {
+    this(id, nome, precoUnitario, quantidadeEmEstoque, categoria);
+    this.descricao = descricao;
+  }
+
   public int getId() {
     return this.id;
   }
