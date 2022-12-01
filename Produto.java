@@ -53,4 +53,12 @@ public class Produto {
   public void setCategoria(Categoria categoria) {
     this.categoria = categoria;
   }
+
+  public double valorTotalEmEstoque() {
+    return this.getQuantidadeEmEstoque() * this.getPrecoUnitario();
+  }
+
+  public double calculaImposto() {
+    return (this.getPrecoUnitario() * 40) / 100;
+  }
 }
