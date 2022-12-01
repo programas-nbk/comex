@@ -75,7 +75,7 @@ public class Cliente {
   }
 
   public String enderecoCompleto() {
-    return String.format("%s, %s, $s, %s, %s, %s", this.getRua(), this.getNumeroDaCasa(), this.getComplemento(),
+    return String.format("%s, %s, %s, %s, %s, %s", this.getRua(), this.getNumeroDaCasa(), this.getComplemento(),
         this.getBairro(), this.getCidade(), this.getEstado());
   }
 }
