@@ -1,6 +1,7 @@
 
 public class Produto {
-    private static int id;
+    private static int idClass;
+    private  int id;
     private String nome;
     private String desc;
     private double punit;
@@ -8,7 +9,8 @@ public class Produto {
     private Categoria categoria;
 
     public Produto(String nome, String desc, double punit, int quantest, Categoria categoria){
-        Produto.id++;
+        Produto.idClass++;
+        this.id = getIdclass();
         this.nome = nome;
         this.desc = desc;
         this.punit = punit;
@@ -16,7 +18,11 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    public static int getId(){
+    public static int getIdclass(){
+        return idClass;
+    }
+
+    public int getId(){
         return id;
     }
 
@@ -54,7 +60,7 @@ public class Produto {
     @Override
     public String toString()
     {
-        return Produto.id +" "+this.nome + " " + this.desc + " " + this.punit + " " + this.quantest + " "
+        return this.id +" "+this.nome + " " + this.desc + " " + this.punit + " " + this.quantest + " "
                 + this.categoria.getNome() + " | Valor Total: " + this.valorTotal() + " | Imposto: " + this.imposto();
     }
 
