@@ -55,7 +55,7 @@ public class Produto {
     public String toString()
     {
         return Produto.id +" "+this.nome + " " + this.desc + " " + this.punit + " " + this.quantest + " "
-                + this.categoria.getNome() + " Valor Total: " + this.valorTotal() + " Imposto: " + this.imposto();
+                + this.categoria.getNome() + " | Valor Total: " + this.valorTotal() + " | Imposto: " + this.imposto();
     }
 
 }
